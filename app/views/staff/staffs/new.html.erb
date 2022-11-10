@@ -1,0 +1,21 @@
+<title>Create Staff</title>
+<h2>Add Staff Member</h2>
+<%= form_for('staff/staffs#new') do |f| %>
+  <p>
+    <%= f.label :firstName %><br/>
+    <%= f.text_field :firstName %>
+  </p>
+  <p>
+    <%= f.label :lastName  %><br/>
+    <%= f.text_field :lastName %>
+  </p>
+  <p>
+    <%= f.label :phoneNumber %><br/>
+    <%= f.number_field :phoneNumber %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<%end%>
+
+<%= link_to 'View', staff_staffs_view_path %>
