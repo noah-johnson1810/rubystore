@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\7247276\Documents\sdsmt classes\f2022classes\CSC461\RubyStore\rubystore\db\development.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="development [2]" uuid="5de15cdf-b200-4b95-9317-a056a7d2d31c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\7575430\dev\source\repos\rubystore\db\development.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
