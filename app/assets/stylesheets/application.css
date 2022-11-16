@@ -21,3 +21,7 @@ table.table1 {
     width:1000px;
     height:200px;
 }
+
+tr.table1{
+    border-bottom: medium solid black;
+}

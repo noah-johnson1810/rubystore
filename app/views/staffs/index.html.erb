@@ -1,0 +1,36 @@
+<h1>Staff</h1>
+
+<table border="medium">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+  </tr>
+  <% @staffs.each do |staff| %>
+    <tr>
+        <td><%= staff.firstName %></td>
+        <td><%= staff.lastName %></td>
+        <td><%= staff.phoneNumber %></td>
+        <td>
+          <a href="/staffs/<%= staff.id %>">
+            <button>
+              View
+            </button>
+          </a>
+          <a href="/staffs/<%= staff.id %>/edit">
+            <button>
+              Edit
+            </button>
+          </a>
+        </td>
+    </tr>
+  <% end %>
+
+</table>
+<div>
+  <a href="/staffs/new">
+    <button>
+      Add
+    </button>
+  </a>
+</div>
