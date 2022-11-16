@@ -1,0 +1,20 @@
+<%= form_with model: staff do |form| %>
+  <div>
+    <%= form.label :firstName %><br>
+    <%= form.text_field :firstName %>
+  </div>
+
+  <div>
+    <%= form.label :lastName %><br>
+    <%= form.text_area :lastName %>
+  </div>
+
+  <div>
+    <%= form.label :phoneNumber %><br>
+    <%= form.text_area :phoneNumber %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
