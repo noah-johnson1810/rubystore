@@ -1,37 +1,32 @@
 <div>
   <p>
-    First Name: <%= @staff.firstName %>
+    First Name: <%= @employee.firstName %>
   </p>
 </div>
 <div>
   <p>
-    Last Name: <%= @staff.lastName %>
+    Last Name: <%= @employee.lastName %>
   </p>
 </div>
 <div>
   <p>
-    Phone Number: <%= @staff.phoneNumber %>
+    Phone Number: <%= @employee.phoneNumber %>
   </p>
 </div>
 <div>
-  <a href="/staffs/<%= @staff.id %>/edit">
+  <a href="/employees/<%= @employee.id %>/edit">
     <button>
       Edit
     </button>
   </a>
 </div>
 <div>
-  <a<%= link_to "Destroy", staff_path(@staff), data:{
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-  } %>>
-    <button>
-      Destroy
-    </button>
+  <a href="/employees/delete/<%=@employee.id %>">
+    Delete
   </a>
 </div>
 <div>
-  <a href="/staffs/index">
+  <a href="/employees/index">
     <button>
       Return
     </button>

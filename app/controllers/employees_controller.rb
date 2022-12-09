@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
   def index
-    @employee = Employee.all
+    @employees = Employee.all
   end
 
   def new
@@ -42,6 +42,8 @@ class EmployeesController < ApplicationController
   end
 
   private
+
+
   def employee_params
     params.require(:employee).permit(:firstName, :lastName, :phoneNumber)
   end

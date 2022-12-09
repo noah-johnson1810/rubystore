@@ -1,4 +1,4 @@
-<h1>Staff</h1>
+<h1>Employees</h1>
 
 <table border="medium">
   <tr>
@@ -6,18 +6,18 @@
     <th>Last Name</th>
     <th>Phone Number</th>
   </tr>
-  <% @staffs.each do |staff| %>
+  <% @employees.each do |employee| %>
     <tr>
-        <td><%= staff.firstName %></td>
-        <td><%= staff.lastName %></td>
-        <td><%= staff.phoneNumber %></td>
+        <td><%= employee.firstName %></td>
+        <td><%= employee.lastName %></td>
+        <td><%= employee.phoneNumber %></td>
         <td>
-          <a href="/staffs/<%= staff.id %>">
+          <a href="/employees/<%= employee.id %>">
             <button>
               View
             </button>
           </a>
-          <a href="/staffs/<%= staff.id %>/edit">
+          <a href="/employees/<%= employee.id %>/edit">
             <button>
               Edit
             </button>
@@ -28,7 +28,7 @@
 
 </table>
 <div>
-  <a href="/staffs/new">
+  <a href="/employees/new">
     <button>
       Add
     </button>
