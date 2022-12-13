@@ -1,0 +1,36 @@
+<h1>Products</h1>
+
+<table border="medium">
+  <tr>
+    <th>Product</th>
+    <th>Description</th>
+    <th>Quantity</th>
+  </tr>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.description %></td>
+      <td><%= product.quantity %></td>
+      <td>
+        <a href="/products/<%= product.id %>">
+          <button>
+            View
+          </button>
+        </a>
+        <a href="/products/<%= product.id %>/edit">
+          <button>
+            Edit
+          </button>
+        </a>
+      </td>
+    </tr>
+  <% end %>
+
+</table>
+<div>
+  <a href="/products/new">
+    <button>
+      Add
+    </button>
+  </a>
+</div>

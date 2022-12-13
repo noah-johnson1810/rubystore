@@ -1,0 +1,15 @@
+<%= form_with model: customer do |form| %>
+  <div>
+    <%= form.label :firstName %><br>
+    <%= form.text_field :firstName %>
+  </div>
+
+  <div>
+    <%= form.label :lastName %><br>
+    <%= form.text_area :lastName %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

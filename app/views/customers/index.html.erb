@@ -1,0 +1,34 @@
+<h1>Customers</h1>
+
+<table border="medium">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <% @customers.each do |customer| %>
+    <tr>
+        <td><%= customer.firstName %></td>
+        <td><%= customer.lastName %></td>
+        <td>
+          <a href="/customers/<%= customer.id %>">
+            <button>
+              View
+            </button>
+          </a>
+          <a href="/customers/<%= customer.id %>/edit">
+            <button>
+              Edit
+            </button>
+          </a>
+        </td>
+    </tr>
+  <% end %>
+
+</table>
+<div>
+  <a href="/customers/new">
+    <button>
+      Add
+    </button>
+  </a>
+</div>

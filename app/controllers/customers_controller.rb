@@ -12,9 +12,9 @@ class CustomersController < ApplicationController
   end
 
   def create
-    @customer = Customer.new(employee_params)
+    @customer = Customer.new(customer_params)
     if @customer.save
-      redirect_to @customers
+      redirect_to @customer
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,8 +27,8 @@ class CustomersController < ApplicationController
   def update
     @customer = Customer.find(params[:id])
 
-    if @customer.update(employee_params)
-      redirect_to @customers
+    if @customer.update(customer_params)
+      redirect_to @customer
     else
       render :edit, status: :unprocessable_entity
     end

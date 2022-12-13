@@ -1,0 +1,29 @@
+<div>
+  <p>
+    First Name: <%= @order.employee_id %>
+  </p>
+</div>
+<div>
+  <p>
+    Last Name: <%= @order.customer_id %>
+  </p>
+</div>
+<div>
+  <a href="/orders/<%= @order.id %>/edit">
+    <button>
+      Edit
+    </button>
+  </a>
+</div>
+<div>
+  <a href="/orders/delete/<%=@order.id %>">
+    Delete
+  </a>
+</div>
+<div>
+  <a href="/orders/index">
+    <button>
+      Return
+    </button>
+  </a>
+</div>

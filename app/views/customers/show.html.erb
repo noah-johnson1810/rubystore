@@ -1,0 +1,29 @@
+<div>
+  <p>
+    First Name: <%= @customer.firstName %>
+  </p>
+</div>
+<div>
+  <p>
+    Last Name: <%= @customer.lastName %>
+  </p>
+</div>
+<div>
+  <a href="/customers/<%= @customer.id %>/edit">
+    <button>
+      Edit
+    </button>
+  </a>
+</div>
+<div>
+  <a href="/customers/delete/<%=@customer.id %>">
+    Delete
+  </a>
+</div>
+<div>
+  <a href="/customers/index">
+    <button>
+      Return
+    </button>
+  </a>
+</div>
