@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_31_171551) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", id: :string, force: :cascade do |t|
+  create_table "orders", id: :integer, auto_increment:true, force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "employee_id", null: false
@@ -35,7 +35,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_31_171551) do
     t.index ["employee_id"], name: "index_orders_on_employee_id"
   end
 
-  create_table "products", id: :string, force: :cascade do |t|
+
+  create_table "products", id: :integer, auto_increment:true, force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "quantity"

@@ -13,12 +13,8 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
-    if @order.save
-      redirect_to @orders
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @order = Order.create(order_params)
+    redirect_to @order
   end
 
   def edit
@@ -29,7 +25,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
 
     if @order.update(order_params)
-      redirect_to @orders
+      redirect_to @order
     else
       render :edit, status: :unprocessable_entity
     end

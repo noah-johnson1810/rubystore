@@ -12,12 +12,8 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
-    if @product.save
-      redirect_to @products
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @product = Product.create(product_params)
+    redirect_to '/products'
   end
 
   def edit
@@ -38,12 +34,12 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
 
-    redirect_to "/products/index"
+    redirect_to "/products"
   end
 
   private
   def product_params
-    params.require(:product).permit(:name, :description, :quantity)
+    params.require(:product).permit(:name, :description, :quantity, :order_id)
   end
 
 end
