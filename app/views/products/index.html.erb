@@ -5,12 +5,14 @@
     <th>Product</th>
     <th>Description</th>
     <th>Quantity</th>
+    <th>Purchased By Order ID</th>
   </tr>
   <% @products.each do |product| %>
     <tr>
       <td><%= product.name %></td>
       <td><%= product.description %></td>
       <td><%= product.quantity %></td>
+      <td><%= product.order_id %></td>
       <td>
         <a href="/products/<%= product.id %>">
           <button>
