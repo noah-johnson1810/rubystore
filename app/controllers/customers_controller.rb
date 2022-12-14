@@ -24,7 +24,7 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
 
     if @customer.update(customer_params)
-      redirect_to @customers
+      redirect_to "/customers"
     else
       render :edit, status: :unprocessable_entity
     end

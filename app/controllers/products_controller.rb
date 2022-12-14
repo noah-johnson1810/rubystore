@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
-      redirect_to @products
+      redirect_to "/products"
     else
       render :edit, status: :unprocessable_entity
     end
