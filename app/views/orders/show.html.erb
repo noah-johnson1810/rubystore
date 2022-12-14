@@ -1,28 +1,44 @@
-<div>
-  <p>
+<%= stylesheet_link_tag "custom.css" %>
+
+<h1 class = "header">View Order</h1>
+
+<table class="GeneratedTable">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+
+  </tr>
+  </thead>
+
+  <td>
     First Name: <%= @order.employee_id %>
-  </p>
-</div>
-<div>
-  <p>
+  </td>
+
+  <td>
     Last Name: <%= @order.customer_id %>
-  </p>
-</div>
+  </td>
+
+</table>
+
 <div>
   <a href="/orders/<%= @order.id %>/edit">
-    <button>
+    <button class="button button2">
       Edit
     </button>
   </a>
 </div>
 <div>
   <a href="/orders/delete/<%=@order.id %>">
+    <button class="button button2">
     Delete
+    </button>
   </a>
 </div>
 <div>
   <a href="/orders/index">
-    <button>
+    <button class="button button2">
       Return
     </button>
   </a>

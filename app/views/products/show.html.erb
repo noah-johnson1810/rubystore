@@ -1,33 +1,48 @@
-<div>
-  <p>
+<%= stylesheet_link_tag "custom.css" %>
+
+<h1 class = "header">View Product</h1>
+
+<table class="GeneratedTable">
+  <thead>
+  <tr>
+    <th>Product Name</th>
+    <th>Product Description</th>
+    <th>Quantity</th>
+
+  </tr>
+  </thead>
+
+  <td>
     Product Name: <%= @product.name %>
-  </p>
-</div>
-<div>
-  <p>
+  </td>
+
+  <td>
     Description: <%=  @product.description %>
-  </p>
-</div>
-<div>
-  <p>
+  </td>
+
+  <td>
     Quantity: <%= @product.quantity %>
-  </p>
-</div>
+  </td>
+
+</table>
+
 <div>
   <a href="/products/<%= @product.id %>/edit">
-    <button>
+    <button class="button button2">
       Edit
     </button>
   </a>
 </div>
 <div>
   <a href="/products/delete/<%=@product.id %>">
+    <button class="button button2">
     Delete
+    </button>
   </a>
 </div>
 <div>
   <a href="/products/index">
-    <button>
+    <button class="button button2">
       Return
     </button>
   </a>
