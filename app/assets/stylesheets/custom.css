@@ -1,0 +1,111 @@
+form {
+display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AAAAAA;
+    border-radius: 2em;
+    margin-inline: auto;
+    width: max(50%,30em);
+}
+
+form > * {
+    margin-top: 1em;
+}
+
+form>*:last-child{
+    margin-bottom: 1em;
+}
+
+form label {
+    font-weight: bold;
+}
+
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button_large {
+    width: 25%;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.button_large1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button_large1:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+
+table.GeneratedTable {
+    width: 25%;
+    background-color: #e0e0e0;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #000000;
+    border-style: solid;
+    color: #000000;
+}
+
+table.GeneratedTable td, table.GeneratedTable th {
+    border-width: 2px;
+    border-color: #000000;
+    border-style: solid;
+    padding: 3px;
+}
+
+table.GeneratedTable thead {
+    background-color: #AAAAAA;
+}
+
+
+.header {
+    width: 25%;
+    text-align: left;
+    background-color: #e0e0e0;
+    color: black;
+    font-size: 2.5em;
+}
+
+
+
+
+

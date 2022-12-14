@@ -1,33 +1,48 @@
-<div>
-  <p>
-    First Name: <%= @employee.firstName %>
-  </p>
-</div>
-<div>
-  <p>
-    Last Name: <%= @employee.lastName %>
-  </p>
-</div>
-<div>
-  <p>
-    Phone Number: <%= @employee.phoneNumber %>
-  </p>
-</div>
+<%= stylesheet_link_tag "custom.css" %>
+
+<h1 class = "header">View Employee</h1>
+
+<table class="GeneratedTable">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+
+  </tr>
+  </thead>
+
+  <td>
+    <%= @employee.firstName %>
+  </td>
+
+  <td>
+    <%= @employee.lastName %>
+  </td>
+
+  <td>
+    <%= @employee.phoneNumber %>
+  </td>
+
+</table>
+
 <div>
   <a href="/employees/<%= @employee.id %>/edit">
-    <button>
+    <button class="button button2">
       Edit
     </button>
   </a>
 </div>
 <div>
   <a href="/employees/delete/<%=@employee.id %>">
+    <button class="button button2">
     Delete
+    </button>
   </a>
 </div>
 <div>
   <a href="/employees/index">
-    <button>
+    <button class="button button2">
       Return
     </button>
   </a>

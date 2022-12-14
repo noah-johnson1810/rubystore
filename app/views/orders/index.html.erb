@@ -1,22 +1,29 @@
-<h1>Orders</h1>
+<%= stylesheet_link_tag "custom.css" %>
 
-<table border="medium">
+<h1 class = "header">Orders</h1>
+
+<table class="GeneratedTable">
+  <thead>
   <tr>
     <th>Employee ID</th>
     <th>Customer ID</th>
+    <th>Options</th>
+
   </tr>
+  </thead>
+
   <% @orders.each do |order| %>
     <tr>
         <td><%= order.employee_id %></td>
         <td><%= order.customer_id %></td>
         <td>
           <a href="/orders/<%= order.id %>">
-            <button>
+            <button class="button button2">
               View
             </button>
           </a>
           <a href="/orders/<%= order.id %>/edit">
-            <button>
+            <button class="button button2">
               Edit
             </button>
           </a>
@@ -27,8 +34,16 @@
 </table>
 <div>
   <a href="/orders/new">
-    <button>
+    <button class="button button2">
       Add
+    </button>
+  </a>
+</div>
+
+<div>
+  <a href="/homepage">
+    <button class="button button2">
+      Return
     </button>
   </a>
 </div>

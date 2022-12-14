@@ -1,28 +1,44 @@
-<div>
-  <p>
-    First Name: <%= @customer.firstName %>
-  </p>
-</div>
-<div>
-  <p>
-    Last Name: <%= @customer.lastName %>
-  </p>
-</div>
+
+<%= stylesheet_link_tag "custom.css" %>
+
+<h1>View Customer</h1>
+
+<table class="GeneratedTable">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  </thead>
+
+  <td>
+    <%= @customer.firstName %>
+  </td>
+
+  <td>
+    <%= @customer.lastName %>
+  </td>
+
+
+</table>
 <div>
   <a href="/customers/<%= @customer.id %>/edit">
-    <button>
+    <button class="button button2">
       Edit
     </button>
   </a>
 </div>
 <div>
   <a href="/customers/delete/<%=@customer.id %>">
+    <button class="button button2">
     Delete
+  </button>
   </a>
+
 </div>
 <div>
   <a href="/customers/index">
-    <button>
+    <button class="button button2">
       Return
     </button>
   </a>
